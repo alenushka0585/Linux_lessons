@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+touch /opt/220124_evening/yarina/file0.txt
+
+        for i in {1..4}
+        do
+        mkdir -p /tmp/user/220124_evening/yarina/DATE0$i
+        done
+mv /opt/220124_evening/yarina/file0.txt /tmp/user/220124_evening/yarina/DATE01/file0.txt
+cat /var/spool/mail/ec2-user | grep bash: | tail -18 > /tmp/user/220124_evening/yarina/DATE02/1.txt
+free -h | sed 's/buff\/cache/cache/' > /tmp/user/220124_evening/yarina/DATE03/2.txt
+
+        for i in {0..9}
+        do
+        touch /tmp/user/220124_evening/yarina/DATE04/test0$i
+        done
